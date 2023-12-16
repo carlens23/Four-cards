@@ -1,0 +1,141 @@
+:root{
+    --card-Red: hsl(0, 78%, 62%);
+    --card-Cyan: hsl(180, 62%, 55%);
+    --card-Orange: hsl(34, 97%, 64%);
+    --card-Blue: hsl(212, 86%, 64%);
+    --title-subtitles: hsl(234, 12%, 34%);
+    --paragraph: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+html, body {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Very-Light-Gray);
+}
+
+
+h1, em  {
+    color: var(--title-subtitles);
+    font-weight: 600;
+    text-align: center;
+}
+
+h1 {
+    padding-bottom: 25px;
+    font-size: 35px;
+}
+
+h1, h2 {
+    color: var(--title-subtitles);
+    font-weight: 600;
+}
+
+em {
+    display: inline-block;
+    width: 100%;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 25px;
+    color: var(--title-subtitles);
+    margin-top: 20px;
+}
+
+p  {
+    color: var(--paragraph);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.box {
+    box-shadow: 0px 4px 10px 2px hsla(228, 45%, 44%, .2);
+    width: 340px;
+    height: 205px;
+    background-color: white;
+    margin: 15px;
+    border-radius: 6px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cyan {
+    border-top: 4px solid var(--card-Cyan);
+    transform: translateY(50%);
+}
+
+.red {
+    border-top: 4px solid var(--card-Red);
+}
+
+.orange {
+    border-top: 4px solid var(--card-Orange);
+    transform: translateY(50%);
+}
+
+.blue {
+    border-top: 4px solid var(--card-Blue);
+}
+
+.attribuition {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.attribuition a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1108px) {
+    
+    .attribuition {
+        position: relative;
+        top: 90px;
+    }
+}
+
+@media screen and (max-width: 774px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 352px);
+        column-gap: 25px;
+        transform: translateY(0);
+    }
+
+    .cyan, .orange {
+        margin-bottom: 110px;
+        margin-top: -91px;
+    }
+
+    .attribuition {
+        text-align: center;
+        margin-top: -90px;
+    }
+
+}
+
+@media screen and (max-width: 322px) {
+    .cards, .box {
+        width: 298px;
+        padding-bottom: 190px;
+        position: relative;
+        left: 8px;
+    }
+
+    .attribuition {
+        position: relative;
+        top: -70px;
+        padding: 0;
+    }
+}
+
+
